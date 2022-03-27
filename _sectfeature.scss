@@ -1,0 +1,70 @@
+.feature {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-row: 1fr 1fr;
+  background-color: $lightgrayblue;
+  padding: 5rem 0;
+
+  &__top {
+    padding: 5rem 0;
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+    @include responsive(large-tablet) {
+      grid-column: 2 / -1;
+    }
+    @include responsive(mobile) {
+      text-align: center;
+      grid-column: 1 / -1;
+      padding: 3rem 3rem;
+    }
+    h2 {
+      font-size: 3rem;
+      font-family: $fontfam;
+      font-weight: 300;
+      color: $pridarkblue;
+    }
+    p {
+      font-size: $defaultfontsize;
+      font-family: $fontfam;
+      padding: 2rem 0;
+
+      color: $grayishblue;
+      line-height: 1.6;
+    }
+  }
+
+  &__main {
+    grid-column: 2 / -2;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+    @include responsive(large-tablet) {
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 5rem;
+    }
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+.features {
+  @include responsive(mobile) {
+    text-align: center;
+  }
+  h3 {
+    font-size: 2rem;
+    font-family: $fontfam;
+    font-weight: 300;
+    color: $pridarkblue;
+    padding: 2rem 0;
+  }
+  p {
+    font-size: 1.4rem;
+    font-family: $fontfam;
+
+    color: $grayishblue;
+    line-height: 1.6;
+  }
+}

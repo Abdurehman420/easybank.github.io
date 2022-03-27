@@ -1,0 +1,39 @@
+$pridarkblue: hsl(233, 26%, 24%);
+$prilimegreen: hsl(136, 65%, 51%);
+$pribrightcyan: hsl(192, 70%, 51%);
+
+$verylightgray: hsl(0, 0%, 98%);
+$grayishblue: hsl(233, 8%, 62%);
+$lightgrayblue: hsl(220, 16%, 96%);
+
+$fontfam: "Public Sans", sans-serif;
+$defaultfontsize: 1.5rem;
+
+@mixin responsive($breakpoint) {
+  @if ($breakpoint) == mobile {
+    @media screen and (max-width: 29.9em) {
+      //  479pxx
+      @content;
+    }
+  }
+
+  @if ($breakpoint) == mtablet {
+    @media screen and (max-width: 47.9em) {
+      //767px
+      @content;
+    }
+  }
+
+  @if ($breakpoint) == large-tablet {
+    @media screen and (max-width: 61.9em) {
+      //     991px
+      @content;
+    }
+  }
+  @if ($breakpoint) == big-desktop {
+    @media (min-width: 85.87em) {
+      //   1920px
+      @content;
+    }
+  }
+}

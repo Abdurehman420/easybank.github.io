@@ -1,0 +1,156 @@
+.footer {
+  grid-column: 1 / -1;
+
+  padding: 5rem 17rem;
+  background-color: $pridarkblue;
+  padding-bottom: 3rem;
+  @include responsive(large-tablet) {
+    padding: 5rem 10rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @include responsive(large-tablet) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-row-gap: 5rem;
+      grid-column-gap: 5rem;
+      justify-items: center;
+    }
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, min-content);
+      grid-row-gap: 0rem;
+    }
+  }
+
+  &__logoicon {
+    @include responsive(mobile) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
+  }
+  &__icons {
+    padding: 4rem 0;
+    // grid-column-gap: 5rem;
+    @include responsive(mobile) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+    svg {
+      margin: 0 0.5rem;
+      cursor: pointer;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+  &__listitems {
+    font-size: $defaultfontsize;
+    font-family: $fontfam;
+    cursor: pointer;
+
+    color: white;
+    padding: 1rem 0;
+    &:first-child {
+      padding-top: 0;
+    }
+    transition: all 200ms;
+
+    &:hover {
+      color: $prilimegreen;
+    }
+  }
+  &__list_1 {
+    // margin-right: 10rem;
+    @include responsive(large-tablet) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+    @include responsive(mobile) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+      text-align: center;
+    }
+  }
+  &__list_2 {
+    @include responsive(large-tablet) {
+      grid-column: 2 / -1;
+      grid-row: 1 / 2;
+    }
+    @include responsive(mobile) {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+      text-align: center;
+    }
+    // margin-right: 10rem;
+  }
+
+  &__btncopy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    p {
+      padding: 4rem 0;
+      font-size: 1.5rem;
+      color: $grayishblue;
+      text-align: start;
+      @include responsive(large-tablet) {
+        text-align: center;
+      }
+    }
+    button {
+      font-weight: 700;
+      &:hover {
+        background-image: linear-gradient(
+          to right,
+          rgba($prilimegreen, 0.5),
+          rgba($pribrightcyan, 0.5)
+        );
+      }
+      @include responsive(mobile) {
+        text-align: center;
+      }
+    }
+    @include responsive(mobile) {
+      grid-column: 1 / -1;
+      grid-row: 5 / 6;
+
+      padding: 3rem 0;
+      align-items: center;
+    }
+  }
+}
+#lol1 {
+  transition: all 300ms;
+  &:hover {
+    fill: $prilimegreen;
+  }
+}
+#lol2 {
+  transition: all 300ms;
+  &:hover {
+    fill: $prilimegreen;
+  }
+}
+#lol3 {
+  transition: all 300ms;
+  &:hover {
+    fill: $prilimegreen;
+  }
+}
+#lol4 {
+  transition: all 300ms;
+  &:hover {
+    fill: $prilimegreen;
+  }
+}
+#lol5 {
+  transition: all 300ms;
+  &:hover {
+    fill: $prilimegreen;
+  }
+}

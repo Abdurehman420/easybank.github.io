@@ -1,0 +1,91 @@
+.article {
+  grid-column: 1 / -1;
+  display: grid;
+  padding: 10rem 0;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: min-content min-content;
+  align-items: center;
+  background-color: $verylightgray;
+
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+    grid-row: 2 / -1;
+    grid-column: 2 / -2;
+    @include responsive(large-tablet) {
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 5rem;
+    }
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__head {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    padding: 5rem 0;
+
+    @include responsive(large-tablet) {
+      grid-column: 2 / -1;
+    }
+    @include responsive(mobile) {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 4rem;
+      font-family: $fontfam;
+      font-weight: 300;
+      color: $pridarkblue;
+    }
+  }
+}
+.articles {
+  box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.1);
+  overflow: hidden;
+  background-color: white;
+
+  &:nth-child(2) {
+    h6 {
+      padding-top: 2rem;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  &__rest {
+    transform: scaleY(1.15) translateY(0.8rem);
+  }
+
+  p {
+    font-size: 1.3rem;
+    font-family: $fontfam;
+
+    color: $grayishblue;
+    line-height: 1.6;
+  }
+  &__content {
+    padding: 3rem 2rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+    font-family: $fontfam;
+    font-weight: 300;
+    color: $pridarkblue;
+    padding: 1rem 0;
+    transition: color 200ms;
+    cursor: pointer;
+    &:hover {
+      color: $prilimegreen;
+    }
+  }
+  h6 {
+    font-size: 1.2rem;
+    font-family: $fontfam;
+    font-weight: 300;
+
+    color: $grayishblue;
+  }
+}
